@@ -7,7 +7,7 @@ html, body, [class*="css"]  {
 /* Background */
 .stApp {
   background: radial-gradient(1000px 400px at 10% -10%, var(--primarySoft), transparent 60%),
-              linear-gradient(180deg, var(--bg) 0%, #ffffff 100%);
+              linear-gradient(180deg, var(--bg) 0%, #e4e9f6 100%);
 }
 
 /* Header */
@@ -67,7 +67,7 @@ html, body, [class*="css"]  {
 
 /* Buttons */
 .stButton>button {
-  background: linear-gradient(180deg, var(--primary), #1d4ed8);
+  background: #142552;
   color: white;
   border: 1px solid rgba(15,23,42,0.08);
   border-radius: 12px;
@@ -113,14 +113,14 @@ input, textarea, .stTextInput>div>div>input {
 
 /* Sidebar – always light theme */
 section[data-testid="stSidebar"] {
-  background: #ffffff !important;
+  background: #2d3748 !important;
   border-right: 1px solid var(--border);
-  color: #0b1220 !important;
+  color: #eeeeef !important;
 }
 
 /* Paksa semua teks di sidebar jadi gelap */
 section[data-testid="stSidebar"] * {
-  color: #0b1220 !important;
+  color: #eeeeef !important;
 }
 
 /* Biar caption dan catatan tetap terlihat tapi sedikit lebih lembut */
@@ -135,38 +135,201 @@ section[data-testid="stSidebar"] .stCaption {
 }
 
 /* ============================================
-   FIX CHECKBOX / RADIO TEXT DI DARK MODE
+   DARK MODE STYLES
    ============================================ */
 
-/* Label teks di samping checkbox / radio */
-.stCheckbox label,
-.stRadio label {
-    color: var(--ink) !important;
-}
-
-/* Streamlit V2 label wrapper */
-[data-testid="stCheckbox"] > label > div,
-[data-testid="stCheckbox"] span,
-[data-testid="stRadio"] label span {
-    color: var(--ink) !important;
-}
-
-/* Checkbox icon / border */
-[data-testid="stCheckbox"] svg {
-    stroke: var(--ink) !important;
-}
-
-/* Saat checkbox dicentang */
-[data-testid="stCheckbox"] input:checked + div svg {
-    stroke: var(--primary) !important;
-    fill: var(--primary) !important;
-}
-
 @media (prefers-color-scheme: dark) {
-  html, body, .stApp, [data-testid="stAppViewContainer"], section[data-testid="stSidebar"] {
-    background: radial-gradient(1000px 400px at 10% -10%, var(--primarySoft), transparent 60%),
-                linear-gradient(180deg, var(--bg) 0%, #ffffff 100%) !important;
+  /* Background */
+  .stApp {
+  background: #12141a !important;
+}
+
+
+  /* Header */
+  .app-title {
+    padding: 18px 20px;
+    border: 1px solid var(--border);
+    background: linear-gradient(180deg, #2a3b4f, #1f2937); /* Dark header */
+    color: #e5e7eb; /* Ensure text is white */
+    border-radius: 16px;
+    box-shadow: 0 10px 28px rgba(15,23,42,0.06);
+  }
+
+  .app-title h1 {
+    margin: 0;
+    font-size: 1.65rem;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    color: #e5e7eb;  /* Ensure text is white */
+  }
+
+  .subtitle {
+    color: #e5e7eb !important;  /* Ensure subtitle text is visible */
+    margin-top: 6px;
+  }
+
+  /* Chips */
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border: 1px solid var(--border);
+    color: #1c2d50 !important; /* Ensure text is white */
+    background: var(--primarySoft);
+  }
+
+  .badge .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    background: var(--primary);
+    display: inline-block;
+  }
+
+  /* Cards */
+  .soft-card {
+    border: 1px solid var(--border);
+    background: #2d3748 !important; /* Dark background */
+    border-radius: 14px;
+    padding: 16px 16px 14px 16px;
+    color: #e5e7eb !important;  /* Ensure text is white */
+    box-shadow: 0 6px 18px rgba(2,6,23,0.05);
+  }
+
+  .soft-card h4 {
+    margin: 0 0 8px 0;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #e5e7eb !important; /* Ensure text is white */
+  }
+
+  .soft-card .muted {
+    color: #e5e7eb !important;  /* Ensure muted text is visible */
+    font-size: 0.9rem;
+  }
+
+  .kpi {
+    font-variant-numeric: tabular-nums;
+    font-weight: 800;
+    font-size: 1.05rem;
+    color: #e5e7eb !important; /* Ensure KPI text is white */
+  }
+
+  /* Hex box */
+  .hexbox {
+    background: #0b1020;
+    color: #e5e7eb !important;  /* Ensure text is white */
+    border: 1px solid #0f172a;
+    border-radius: 12px;
+    padding: 10px 12px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 12px;
+    white-space: pre;
+    overflow-x: auto;
+  }
+
+  /* Buttons */
+ .stButton>button {
+  background: #142552;
+  color: white;
+  border: 1px solid rgba(15,23,42,0.08);
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-weight: 700;
+  letter-spacing: .2px;
+  box-shadow: 0 6px 16px rgba(37,99,235,0.25);
+}
+
+  .stButton > button:hover {
+    transform: translateY(-1px);
+  }
+
+  /* Inputs */
+  input, textarea, .stTextInput > div > div > input {
+    background: #2d3748 !important; /* Dark input background */
+    color: #e5e7eb !important;     /* Light text color */
+    border: 1px solid var(--border) !important;
+    border-radius: 12px !important;
+  }
+
+  .stTextArea textarea {
+    background: #2d3748 !important;
+    color: #e5e7eb !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 12px !important;
+  }
+
+  /* Tabs */
+  .stTabs [data-baseweb="tab-list"] {
+    gap: 6px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .stTabs [data-baseweb="tab"] {
+    color: #ffffff;
+    background: #2d3748 !important; /* Dark background for tabs */
+    border: 1px solid var(--border);
+    border-bottom: none;
+    border-radius: 12px 12px 0 0;
+    padding: 10px 14px;
+  }
+
+  .stTabs [aria-selected="true"] {
     color: #0b1220 !important;
+    background: #f8fafc !important;
+    border-bottom: 1px solid #f8fafc !important;
+  }
+
+  /* Sidebar */
+  section[data-testid="stSidebar"] {
+    background: #2d3748 !important;
+    border-right: 1px solid var(--border);
+    color: #e5e7eb !important;
+  }
+
+  section[data-testid="stSidebar"] * {
+    color: #e5e7eb !important;
+  }
+
+  /* Biar caption dan catatan tetap terlihat tapi sedikit lebih lembut */
+  section[data-testid="stSidebar"] small,
+  section[data-testid="stSidebar"] .stCaption {
+    color: #64748b !important;  /* sama dengan var(--muted) */
+  }
+
+  /* Caption */
+  .block-container > div > small, .stCaption {
+    color: var(--muted) !important;
+  }
+
+  /* Warning, Success, and Error messages */
+  .stWarning {
+    background-color: #1f2937 !important;
+    color: #d97706 !important;
+    border: 1px solid #d97706 !important;
+  }
+
+  .stSuccess {
+    background-color: #1f2937 !important;
+    color: #16a34a !important;
+    border: 1px solid #16a34a !important;
+  }
+
+  .stError {
+    background-color: #1f2937 !important;
+    color: #dc2626 !important;
+    border: 1px solid #dc2626 !important;
+  }
+
+  /* Code block (hasil enkripsi) */
+  .stCode {
+    background-color: #0b1020 !important;
+    color: #e5e7eb !important;
+    border: 1px solid #0f172a !important;
+    padding: 10px 12px !important;
   }
 }
-
