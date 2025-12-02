@@ -1,4 +1,4 @@
-# VigiVault (Vigenere Cipher (Text & File Encryption)
+# 🔐 VigiVault (Vigenere Cipher (Text & File Encryption)
 
 VigiVault adalah aplikasi enkripsi berbasis algoritma **Vigenere Cipher** yang digunakan untuk mengenkripsi dan mendekripsi teks serta file dengan dua mode yang berbeda: **Vigenere klasik (A-Z)** dan **Vigenere byte-wise (0-255)**. 
 
@@ -16,47 +16,47 @@ VigiVault adalah aplikasi enkripsi berbasis algoritma **Vigenere Cipher**, yang 
 ---
 
 ## Fitur Utama
-1. **Mode Teks (Vigenere Klasik A-Z)**
+1. **🔤 Mode Teks (Vigenere Klasik A-Z)**
    - Menggunakan Vigenere Cipher dengan mod 26 untuk mengenkripsi teks.
    - Mendukung enkripsi dan dekripsi teks hanya menggunakan huruf A-Z.
    - Mempertahankan spasi dan tanda baca dalam proses enkripsi.
    - Hasil enkripsi dapat diunduh dalam format `.txt`.
 
 
-2. **Mode File (Vigenere Byte-wise 0-255)**
+2. **📁 Mode File (Vigenere Byte-wise 0-255)**
    - Menggunakan Vigenere Cipher dengan mod 256 untuk mengenkripsi file apa pun.
    - File yang terenkripsi akan disimpan dalam format `.enc`.
    - Fitur preview memungkinkan pengguna melihat informasi tentang file asli dan terenkripsi (ukuran, hash SHA-256, dan entropi).
    - Fitur re-enkripsi digunakan untuk memverifikasi dekripsi dengan membandingkan hasil re-enkripsi dengan file terenkripsi asli.
 
 
-3. **Pembuatan Key Acak**
+3. **🎲 Pembuatan Key Acak**
    - Pengguna dapat menghasilkan **key acak** dengan panjang yang dapat dikustomisasi (8 hingga 64 karakter), yang mencakup simbol, angka, dan huruf besar/kecil.
    - Key acak digunakan untuk mode enkripsi teks dan file.
 
 
-4. **Verifikasi Enkripsi dan Dekripsi**
+4. **✔️ Verifikasi Enkripsi dan Dekripsi**
    - Setelah dekripsi, sistem memverifikasi keakuratan hasil dekripsi dengan cara re-enkripsi dan membandingkan hash SHA-256 dari hasil re-enkripsi dengan file yang asli.
    - Entropi juga dihitung untuk memastikan bahwa hasil dekripsi cocok dengan data asli.
 
 
-5. **Manajemen Key**
+5. **🔑 Manajemen Key**
    - Pengguna dapat melihat dan mengelola key acak yang digunakan dalam enkripsi dan dekripsi.
    - Aplikasi memberikan indikator kekuatan key berdasarkan entropi key.
 
 
-6. **Perbandingan File**
+6. **📝 Perbandingan File**
    - Pengguna dapat membandingkan dua file untuk memverifikasi apakah mereka identik (byte-by-byte).
    - Aplikasi akan menampilkan perbedaan byte pertama yang berbeda antara kedua file.
 
 ---
 
-## Cara Penggunaan
+##🧭 Cara Penggunaan
 Pengguna dapat memilih mode yang digunakan, yaitu menggunakan algoritma “Teks (Vigenere klasik A–Z)” atau “File (Byte-wise 0–255)” melalui sidebar untuk mengenkripsi dan mendekripsi teks.
 
 ---
 
-1. **Pemilihan Mode Teks (Vigenere klasik A–Z)**
+### 1. Pemilihan Mode Teks (Vigenere klasik A–Z)###
 #### Langkah-langkah:
 1. Pilih **"Teks (Vigenere klasik A–Z)"** pada sidebar.
 2. Masukkan **plaintext** yang ingin Anda enkripsi.
@@ -70,7 +70,7 @@ Pengguna dapat memilih mode yang digunakan, yaitu menggunakan algoritma “Teks 
 
 ---
 
-2. **Pemilihan Mode File (Byte-wise 0–255)**
+### 2. Pemilihan Mode File (Byte-wise 0–255)###
 #### Langkah-langkah:
 1. Pilih **"File (Byte-wise 0–255)"** pada sidebar.
 2. Unggah **file** yang ingin Anda enkripsi.
