@@ -51,12 +51,13 @@ VigiVault adalah aplikasi enkripsi berbasis algoritma **Vigenere Cipher**, yang 
 
 ---
 
-##🧭 Cara Penggunaan
+## 🧭 Cara Penggunaan 
+
 Pengguna dapat memilih mode yang digunakan, yaitu menggunakan algoritma “Teks (Vigenere klasik A–Z)” atau “File (Byte-wise 0–255)” melalui sidebar untuk mengenkripsi dan mendekripsi teks.
 
 ---
 
-### 1. Pemilihan Mode Teks (Vigenere klasik A–Z)###
+### 1. Pemilihan Mode Teks (Vigenere klasik A–Z)
 #### Langkah-langkah:
 1. Pilih **"Teks (Vigenere klasik A–Z)"** pada sidebar.
 2. Masukkan **plaintext** yang ingin Anda enkripsi.
@@ -70,7 +71,7 @@ Pengguna dapat memilih mode yang digunakan, yaitu menggunakan algoritma “Teks 
 
 ---
 
-### 2. Pemilihan Mode File (Byte-wise 0–255)###
+### 2. Pemilihan Mode File (Byte-wise 0–255)
 #### Langkah-langkah:
 1. Pilih **"File (Byte-wise 0–255)"** pada sidebar.
 2. Unggah **file** yang ingin Anda enkripsi.
