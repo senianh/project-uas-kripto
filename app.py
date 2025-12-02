@@ -17,6 +17,7 @@ import secrets
 # ==============================
 st.set_page_config(page_title="VigiVault – Vigenere Classic & Bytewise", page_icon="🔐", layout="wide")
 
+
 ACCENT = {
     "primary": "#2563eb",
     "primarySoft": "#eaf2ff",
@@ -29,6 +30,7 @@ ACCENT = {
     "warn": "#d97706",
     "bad": "#dc2626",
 }
+
 # ==============================
 # INJECT CSS VARIABLES
 # ==============================
