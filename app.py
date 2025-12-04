@@ -406,7 +406,7 @@ else:
                     plain = vigenere_decrypt_bytes(enc, keyf)
 
                     if hint.strip():
-                        out_name = hint.strip()
+                        out_name = "decrypted_" + hint.strip()
                     else:
                         base = fenc.name[:-4] if fenc.name.endswith(".enc") else fenc.name
                         out_name = "decrypted_" + base
